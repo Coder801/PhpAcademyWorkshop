@@ -1,0 +1,44 @@
+// Header
+/* ======================= */
+
+.header {
+  $maxWidth: 550px;
+
+  & {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('../img/header__bg.jpg');
+    background-size: cover;
+  }
+  & > .headline {
+    max-width: $maxWidth;
+    color: $primaryColor;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 54px;
+    font-family: $primaryFont;
+  }
+
+  & > .text {
+    max-width: $maxWidth;
+    color: $primaryColor;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: $primaryFont;
+    line-height: 30px;
+    margin-bottom: 80px;
+  }
+
+  & > .scroll-down {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

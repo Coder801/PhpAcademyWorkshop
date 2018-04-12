@@ -1,6 +1,9 @@
 // Base
 @import "normalize";
-@import "variables";
+@import "./base/variables";
 
-// Blocks
-@import "header"
+// Layout
+@import "./layout/header";
+@import "./layout/about";
+
+@import "./blocks/content-box";

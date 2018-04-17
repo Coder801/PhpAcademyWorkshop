@@ -1,0 +1,24 @@
+.contact-form {
+  &__row {
+    margin-bottom: 15px;
+  }
+  &__label {
+    font-family: $primaryFont;
+    color: $secondaryColor;
+  }
+  &__field {
+    display: block;
+    width: 100%;
+    border: 2px solid $secondaryColor;
+    box-sizing: border-box;
+    padding: 8px;
+    &::placeholder {
+      color: #ccc;
+      font-style: italic;
+    }
+
+  }
+  &__button {
+    margin-top: 30px;
+  }
+}

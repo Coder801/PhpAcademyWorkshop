@@ -425,6 +425,10 @@ template {
   left: 50%;
   transform: translateX(-50%); }
 
+.header .button {
+  margin-top: 0;
+  margin-bottom: 0; }
+
 .about {
   display: flex;
   align-items: center;
@@ -438,6 +442,10 @@ template {
   background-image: url("../img/service__bg.jpg");
   background-size: cover; }
 
+.what-we-do {
+  padding-top: 150px;
+  padding-bottom: 150px; }
+
 .our-works {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -446,6 +454,11 @@ template {
   grid-auto-rows: 200px;
   grid-column-gap: 5px;
   grid-row-gap: 5px; }
+  @media screen and (max-width: 500px) {
+    .our-works {
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: 180px;
+      grid-row-gap: 2px; } }
 
 .our-works > .figure {
   overflow: hidden;
@@ -469,7 +482,30 @@ template {
     font-size: 34px;
     text-transform: uppercase;
     font-family: "Lato", sans-serif;
-    font-weight: 700; }
+    font-weight: 300; }
+    @media screen and (max-width: 500px) {
+      .our-works > .figure > .description {
+        font-size: 16px;
+        font-weight: 300; } }
+
+.contacts {
+  padding-top: 60px;
+  padding-bottom: 50px; }
+
+.footer {
+  padding-bottom: 30px; }
+
+.footer__icon {
+  display: inline-block;
+  margin-right: 40px; }
+
+.footer__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  text-align: center;
+  font-family: "Lato", sans-serif; }
 
 .content-box {
   position: relative;
@@ -507,6 +543,22 @@ template {
       left: -2px; }
     .content-box__title:after {
       right: -2px; }
+  .content-box__with-icon {
+    padding-top: 30px;
+    padding-bottom: 20px; }
+    .content-box__with-icon--first {
+      padding-top: 60px; }
+  .content-box__subtitle {
+    font-family: "Lato", sans-serif;
+    color: #3c3c3c;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 20px 0; }
+  .content-box__icon {
+    display: block;
+    text-align: center; }
   .content-box__text {
     color: #3c3c3c;
     text-align: center;
@@ -521,3 +573,99 @@ template {
       color: white; }
       .content-box--white .content-box__title:before, .content-box--white .content-box__title:after {
         background-color: white; }
+  .content-box__button {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center; }
+
+.button {
+  background-color: #3c3c3c;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  box-sizing: border-box;
+  min-width: 396px;
+  padding: 15px 20px;
+  border: 0;
+  display: inline-block;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  border: 2px solid #3c3c3c; }
+  .button:hover {
+    animation-name: buttonHover;
+    animation-duration: .3s;
+    animation-fill-mode: forwards; }
+  .button--block {
+    display: block;
+    width: 100%; }
+  .button--small {
+    font-size: 16px;
+    padding: 10px 15px;
+    min-width: 1px; }
+
+@keyframes buttonHover {
+  0% {
+    color: white;
+    background-color: #3c3c3c; }
+  100% {
+    color: #3c3c3c;
+    background-color: white; } }
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+  opacity: 0;
+  transition: all .5s ease; }
+
+.modal__inner {
+  width: 300px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px 20px 40px;
+  transform: translateY(-50%);
+  transition: all .5s ease; }
+
+.modal__title {
+  font-family: "Lato", sans-serif;
+  color: #3c3c3c;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 24px; }
+
+.modal--active {
+  opacity: 1;
+  z-index: 10; }
+  .modal--active .modal__inner {
+    transform: translateY(0%); }
+
+.contact-form__row {
+  margin-bottom: 15px; }
+
+.contact-form__label {
+  font-family: "Lato", sans-serif;
+  color: #3c3c3c; }
+
+.contact-form__field {
+  display: block;
+  width: 100%;
+  border: 2px solid #3c3c3c;
+  box-sizing: border-box;
+  padding: 8px; }
+  .contact-form__field::placeholder {
+    color: #ccc;
+    font-style: italic; }
+
+.contact-form__button {
+  margin-top: 30px; }

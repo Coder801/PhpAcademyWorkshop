@@ -1,0 +1,41 @@
+.modal {
+  & {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    opacity: 0;
+    transition: all .5s ease;
+  }
+  &__inner {
+    width: 300px;
+    margin: 0 auto;
+    background-color: $primaryColor;
+    padding: 20px 20px 40px;
+    transform: translateY(-50%);
+    transition: all .5s ease;
+  }
+  &__title {
+    font-family: $primaryFont;
+    color: $secondaryColor;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 24px;
+  }
+
+  &--active {
+    opacity: 1;
+    z-index: 10;
+
+    & .modal__inner {
+      transform: translateY(0%);
+    }
+  }
+}

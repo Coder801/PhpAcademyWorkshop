@@ -41,4 +41,9 @@
     left: 50%;
     transform: translateX(-50%);
   }
+
+  & .button {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }

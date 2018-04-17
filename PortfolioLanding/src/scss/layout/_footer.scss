@@ -1,0 +1,17 @@
+.footer {
+  & {
+    padding-bottom: 30px;
+  }
+  &__icon {
+    display: inline-block;
+    margin-right: 40px;
+  }
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    text-align: center;
+    font-family: $primaryFont;
+  }
+}

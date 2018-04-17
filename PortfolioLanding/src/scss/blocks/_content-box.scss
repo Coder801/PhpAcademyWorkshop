@@ -43,6 +43,30 @@
     }
   }
 
+  &__with-icon {
+    padding-top: 30px;
+    padding-bottom: 20px;
+
+    &--first {
+      padding-top: 60px;
+    }
+  }
+
+  &__subtitle {
+    font-family: $primaryFont;
+    color: $secondaryColor;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 20px 0;
+  }
+
+  &__icon {
+    display: block;
+    text-align: center;
+  }
+
   &__text {
     color: $secondaryColor;
     text-align: center;
@@ -63,6 +87,12 @@
         background-color: $primaryColor;
       }
     }
+  }
+
+  &__button {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
   }
 
 }

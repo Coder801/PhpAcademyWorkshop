@@ -9,10 +9,11 @@
     grid-column-gap: 5px;
     grid-row-gap: 5px;
 
-    @media screen and (max-width: 500px) {
+    @include tablet {
       grid-template-columns: 1fr 1fr;
-      grid-auto-rows: 180px;
-      grid-row-gap: 2px;
+    }
+    @include mobile {
+      grid-template-columns: 1fr;
     }
   }
 
@@ -43,9 +44,8 @@
       font-family: $primaryFont;
       font-weight: 300;
 
-      @media screen and (max-width: 500px) {
-        font-size: 16px;
-        font-weight: 300;
+      @include tablet {
+        font-size: 24px;
       }
     }
   }

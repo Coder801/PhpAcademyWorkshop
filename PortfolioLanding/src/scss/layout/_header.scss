@@ -13,6 +13,7 @@
     width: 100%;
     background-image: url('../img/header__bg.jpg');
     background-size: cover;
+    background-position: center;
   }
   & > .headline {
     max-width: $maxWidth;
@@ -22,6 +23,10 @@
     font-weight: 500;
     font-size: 54px;
     font-family: $primaryFont;
+
+    @include mobile {
+      font-size: 30px;
+    }
   }
 
   & > .text {
@@ -33,17 +38,46 @@
     font-family: $primaryFont;
     line-height: 30px;
     margin-bottom: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include mobile {
+      font-size: 13px;
+
+       & br {
+         display: none;
+       }
+    }
   }
 
   & > .scroll-down {
     position: absolute;
-    bottom: 50px;
+    bottom: 40px;
     left: 50%;
-    transform: translateX(-50%);
+
+    animation-name: scrollDown;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
   }
 
   & .button {
     margin-top: 0;
     margin-bottom: 0;
+  }
+
+  @keyframes scrollDown {
+    0% {
+      transform: translateY(0%);
+    }
+    20% {
+      transform: translateY(-50%);
+    }
+    40% {
+      transform: translateY(20%);
+    }
+    60% {
+      transform: translateY(0%);
+    }
   }
 }

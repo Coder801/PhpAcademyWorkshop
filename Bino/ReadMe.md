@@ -1,4 +1,5 @@
 **Задание:** Сверстать макет шаблона из файла psd
+
 **Дизайн:** https://www.dropbox.com/s/wv6aazjr67r9pwf/Index.psd?dl=0
 (Для просмотра и редактирования используйте Photoshop)
 
